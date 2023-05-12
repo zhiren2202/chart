@@ -1,0 +1,14 @@
+.w50 {
+    width: 49%;
+    float: left;
+    margin: 0.5%;
+}
+
+.w100 {
+    width: 100%;
+    overflow: hidden;
+}
+
+h2 {
+    margin-top: 2em;
+}

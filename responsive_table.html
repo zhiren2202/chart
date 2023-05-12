@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    
+<style>
+
+/* table2 */
+.table {
+	border-spacing: 0;
+	width: 95%;
+	margin: 0 auto 30px auto;
+	}
+
+    .table th,
+    .table td {
+        padding: 8px;
+    }
+
+    .table th {
+        background-color: wheat;
+        border-top: 1px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .table td {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .table tr:last-child td {
+        border-bottom: 1px solid black;
+    }
+
+    .table tr th:nth-child(4),
+    .table tr td:nth-child(4) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        .table {
+            width: 90%;
+        }
+
+        .table tr th:nth-child(4),
+        .table tr td:nth-child(4) {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .table {
+            width: 49%;
+            margin: 0;
+        }
+    }
+/* //table2 */
+
+/* table4 */
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+.table4 { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 1em;
+}
+/* Zebra striping */
+.table4 tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+.table4 th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+.table4 td, .table4 th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	.table4, .table4 thead, .table4 tbody, .table4 th, .table4 td, .table4 tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.table4 thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	.table4 tr { border: 1px solid #ccc; }
+	
+	.table4 td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.table4 td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	.table4 td:nth-of-type(1):before { content: "First Name"; }
+	.table4 td:nth-of-type(2):before { content: "Last Name"; }
+	.table4 td:nth-of-type(3):before { content: "Job Title"; }
+	.table4 td:nth-of-type(4):before { content: "Favorite Color"; }
+	.table4 td:nth-of-type(5):before { content: "Wars of Trek?"; }
+	.table4 td:nth-of-type(6):before { content: "Secret Alias"; }
+	.table4 td:nth-of-type(7):before { content: "Date of Birth"; }
+	.table4 td:nth-of-type(8):before { content: "Dream Vacation City"; }
+	.table4 td:nth-of-type(9):before { content: "GPA"; }
+	.table4 td:nth-of-type(10):before { content: "Arbitrary Data"; }
+}
+/* //table4 */
+
+</style>
+
+</head>
+<body>
+
+<!-- table2 -->
+<div class="container">
+	<table class="table">
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Job Title</th>
+			<th>Job Title</th>
+		</tr>
+	
+	
+		<tr>
+			<td>James</td>
+			<td>Matman</td>
+			<td>Chief Sandwich Eater</td>
+			<td>Chief Sandwich Eater</td>
+		</tr>
+		<tr>
+			<td>The</td>
+			<td>Tick</td>
+			<td>Crimefighter Sorta</td>
+			<td>Crimefighter Sorta</td>
+		</tr>
+		<tr>
+			<td>James</td>
+			<td>Matman</td>
+			<td>Chief Sandwich Eater</td>
+			<td>Chief Sandwich Eater</td>
+		</tr>
+		<tr>
+			<td>The</td>
+			<td>Tick</td>
+			<td>Crimefighter Sorta</td>
+			<td>Crimefighter Sorta</td>
+		</tr>
+	</table>
+
+	<table class="table">	
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Job Title</th>
+			<th>Job Title</th>
+		</tr>
+	
+	
+		<tr>
+			<td>James</td>
+			<td>Matman</td>
+			<td>Chief Sandwich Eater</td>
+			<td>Chief Sandwich Eater</td>
+		</tr>
+		<tr>
+			<td>The</td>
+			<td>Tick</td>
+			<td>Crimefighter Sorta</td>
+			<td>Crimefighter Sorta</td>
+		</tr>
+		<tr>
+			<td>James</td>
+			<td>Matman</td>
+			<td>Chief Sandwich Eater</td>
+			<td>Chief Sandwich Eater</td>
+		</tr>
+		<tr>
+			<td>The</td>
+			<td>Tick</td>
+			<td>Crimefighter Sorta</td>
+			<td>Crimefighter Sorta</td>
+		</tr>
+	</table>
+</div>
+<!-- //table2 -->
+
+<!-- table3 -->
+<style>
+	.table3-wrapper {
+	  overflow-x: auto; /* responsive */
+	}
+	.table3 {
+	  width: 100%; /* responsive */
+	  border-collapse: collapse;
+	}
+	.table3 th, .table3 td {
+	  padding: 10px;
+	  border: 1px solid #ddd;
+	}
+
+	</style>
+<div class="table3-wrapper">
+	<table class="table3">
+		<tr class="thead">
+			<th>num</th>
+			<th>column1</th>
+			<th>column2</th>
+			<th>column3</th>
+			<th>column4</th>
+			<th>column5</th>
+			<th>column6</th>
+			<th>column7</th>
+			<th>column8</th>
+			<th>column9</th>
+			<th>column10</th>
+			<th>column11</th>
+			<th>column12</th>
+		</tr>
+		<tr class="tbody">
+			<th>row1</th>
+			<td>cell1</td>
+			<td>cell2</td>
+			<td>cell3</td>
+			<td>cell4</td>
+			<td>cell5</td>
+			<td>cell6</td>
+			<td>cell7</td>
+			<td>cell8</td>
+			<td>cell9</td>
+			<td>cell10</td>
+			<td>cell11</td>
+			<td>cell12</td>
+		</tr>
+		<tr class="tbody">
+			<th>row2</th>
+			<td>cell1</td>
+			<td>cell2</td>
+			<td>cell3</td>
+			<td>cell4</td>
+			<td>cell5</td>
+			<td>cell6</td>
+			<td>cell7</td>
+			<td>cell8</td>
+			<td>cell9</td>
+			<td>cell10</td>
+			<td>cell11</td>
+			<td>cell12</td>
+		</tr>
+		<tr class="tbody">
+			<th>row3</th>
+			<td>cell1</td>
+			<td>cell2</td>
+			<td>cell3</td>
+			<td>cell4</td>
+			<td>cell5</td>
+			<td>cell6</td>
+			<td>cell7</td>
+			<td>cell8</td>
+			<td>cell9</td>
+			<td>cell10</td>
+			<td>cell11</td>
+			<td>cell12</td>
+		</tr>
+		<tr class="tbody">
+			<th>row4</th>
+			<td>cell1</td>
+			<td>cell2</td>
+			<td>cell3</td>
+			<td>cell4</td>
+			<td>cell5</td>
+			<td>cell6</td>
+			<td>cell7</td>
+			<td>cell8</td>
+			<td>cell9</td>
+			<td>cell10</td>
+			<td>cell11</td>
+			<td>cell12</td>
+		</tr>
+	</table>
+</div>
+<!-- //table3 -->
+
+<!-- table4 -->
+<table class="table4">
+	<thead>
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Job Title</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>James</td>
+		<td>Matman</td>
+		<td>Chief Sandwich Eater</td>
+	</tr>
+	<tr>
+		<td>The</td>
+		<td>Tick</td>
+		<td>Crimefighter Sorta</td>
+	</tr>
+	</tbody>
+</table>
+<!-- //table4 -->
+
+
+</body>
+</html>
