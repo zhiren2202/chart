@@ -7,14 +7,14 @@ body {
     padding: 1em;
 }
 
-[class*='maxTable'] {
+[class*='maxTbl_wrapper'] {
     width: 100%;
     margin: 1em auto;
     margin-bottom: 2em;
     border: 1px solid #aaa;
 }
 
-[class*='maxTable-scroll-fix'] {}
+[class*='maxTbl_wrapper-scrollFix'] {}
 
 /* maxTbl : basic */
 .maxTbl_wrapper {}
@@ -49,6 +49,10 @@ body {
 
 
 /* sticky1 */
+.maxTbl_wrapper-scroll {
+    overflow: auto;
+}
+
 .maxTbl_wrapper-scroll .maxTbl {
     border-collapse: collapse;
 }
@@ -72,12 +76,7 @@ body {
     text-align: center;
 }
 
-.maxTbl_wrapper-scroll {
-    overflow: auto;
-}
-
 /* sticky4 */
-/* JUST COMMON TABLE STYLES... */
 .maxTbl_wrapper-scrollFix-row {
     margin: 1em auto;
     margin-bottom: 2em;
@@ -124,34 +123,34 @@ body {
 }
 
 /* sticky3 */
-.maxTbl_wrapper-scrollFix-row {
+.maxTbl_wrapper-scrollFix-col {
     margin-top: 1em;
     margin-bottom: 2em;
 }
 
-.maxTbl_wrapper-scrollFix-row .maxTbl {
+.maxTbl_wrapper-scrollFix-col .maxTbl {
     border-collapse: collapse;
     width: 100%;
 }
 
-.maxTbl_wrapper-scrollFix-row th,
-.maxTbl_wrapper-scrollFix-row td {
+.maxTbl_wrapper-scrollFix-col th,
+.maxTbl_wrapper-scrollFix-col td {
     background: #eee;
     /* padding: 8px 16px; */
     padding: 0.5em 1em;
 }
 
-.maxTbl_wrapper-scrollFix-row .maxTbl thead th {
+.maxTbl_wrapper-scrollFix-col .maxTbl th {
     background-color: #aaa;
 }
 
 
-.maxTbl_wrapper-scrollFix-row {
+.maxTbl_wrapper-scrollFix-col {
     overflow: auto;
     height: 200px;
 }
 
-.maxTbl_wrapper-scrollFix-row thead th {
+.maxTbl_wrapper-scrollFix-col thead th {
     position: sticky;
     top: 0;
     min-width: 125px;
