@@ -11,13 +11,17 @@ body {
     width: 100%;
     margin: 1em auto;
     margin-bottom: 2em;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
     overflow: auto;
 }
 
 [class*='maxTbl_wrapper'] .maxTbl {
     border-collapse: collapse;
     width: 100%;    
+}
+
+[class*='maxTbl_wrapper'] .maxTbl caption {
+    font-size: 1.2em;
 }
 
 .maxTbl th,
@@ -35,28 +39,22 @@ body {
 }
 
 /* maxTbl : basic */
-.maxTbl_wrapper {}
-
 .maxTbl_wrapper .maxTbl {
-    overflow-x: hidden;
+    overflow: hidden;
+}
+.maxTbl_wrapper .maxTbl th,
+.maxTbl_wrapper .maxTbl td {
+    min-width: auto;
 }
 
-.maxTbl thead tr th {}
-
-.maxTbl thead tr td {}
-
 /* maxTbl : scroll */
-.maxTbl_wrapper-scroll {}
-
-.maxTbl_wrapper-scroll .maxTbl {}
-
 .maxTbl_wrapper-scroll .maxTbl th {
     min-width: 120px;
     border-right: 1px solid #aaa;
     border-bottom: 1px solid #eee;
 }
 
-.maxTbl_wrapper-scroll .maxTbl td {
+.maxTbl_wrapper-scroll .maxTbl tbody tr td {
     min-width: 66px;
     border: 1px solid #eee;
     border-left: 0;
@@ -80,22 +78,29 @@ body {
 .maxTbl_wrapper-scrollFix-row {
     border: 1px solid #aaa;
 }
-
-.maxTbl_wrapper-scrollFix-row .maxTbl {}
-
-.maxTbl_wrapper-scrollFix-row .maxTbl th,
-.maxTbl_wrapper-scrollFix-row .maxTbl td {
-    background: #fff;
-    padding: 0.5em 1em;
+.maxTbl_wrapper-scrollFix-row tr th::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #aaa;
 }
 
-.maxTbl_wrapper-scrollFix-row .maxTbl th {
+.maxTbl_wrapper-scrollFix-row .maxTbl thead tr th,
+.maxTbl_wrapper-scrollFix-row .maxTbl thead tr td {
+    background: #fff;
+    padding: 0.5em 1em;
+    border-top: 1px solid #aaa;
+}
+
+.maxTbl_wrapper-scrollFix-row .maxTbl thead tr th {
     min-width: 120px;
-    border-right: 1px solid #aaa;
     border-bottom: 1px solid #eee;
 }
 
-.maxTbl_wrapper-scrollFix-row .maxTbl td {
+.maxTbl_wrapper-scrollFix-row .maxTbl tbody tr td {
     min-width: 66px;
     border: 1px solid #eee;
     border-left: 0;
@@ -112,21 +117,46 @@ body {
 /* maxTbl : fixed (col) */
 .maxTbl_wrapper-scrollFix-col {
     height: 200px;
+    border: 1px solid #333;
 }
-
-.maxTbl_wrapper-scrollFix-col .maxTbl {}
 
 .maxTbl_wrapper-scrollFix-col .maxTbl th,
 .maxTbl_wrapper-scrollFix-col .maxTbl td {
     background: #eee;
     padding: 0.5em 1em;
+    border-left: 1px solid #333;
 }
 
-.maxTbl_wrapper-scrollFix-col .maxTbl thead th {
+.maxTbl_wrapper-scrollFix-col .maxTbl th:first-child,
+.maxTbl_wrapper-scrollFix-col .maxTbl td:first-child {
+    border-left: 0;
+}
+
+.maxTbl_wrapper-scrollFix-col .maxTbl thead tr th {
     position: sticky;
     top: 0;
     min-width: 125px;
     background-color: #aaa;
+}
+
+.maxTbl_wrapper-scrollFix-col .maxTbl thead tr th::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+}
+
+.maxTbl_wrapper-scrollFix-col .maxTbl thead tr th
+
+.maxTbl_wrapper-scrollFix-col .maxTbl tbody tr td {
+    border-bottom: 1px solid #333;
+}
+
+.maxTbl_wrapper-scrollFix-col .maxTbl tbody .border_sticky-bottom {
+    border-bottom: 0;
 }
 
 /* maxTbl : fixed (both) */
@@ -134,37 +164,78 @@ body {
     height: 200px;
 }
 
-.maxTbl_wrapper-scrollFix-both .maxTbl th,
-.maxTbl_wrapper-scrollFix-both .maxTbl td {
-    border: 1px solid #eee;
+/* .maxTbl_wrapper-scrollFix-both .maxTbl th, */
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody tr td {
+    background-color: #eee;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-.maxTbl_wrapper-scrollFix-both .maxTbl thead th {
+.maxTbl_wrapper-scrollFix-both .maxTbl thead tr th {
     position: sticky;
     top: 0;
-    border-bottom: 1px solid #aaa;
-    background-color: #333;
-    color: #efefef;
+    background-color: #aaa;
+    color: #333;
+    border-left: 1px solid #eee;
 }
 
-.maxTbl_wrapper-scrollFix-both .maxTbl tbody th {
-    position: sticky;
-    left: 0;
-    border-right: 1px solid #aaa;
-    background-color: #333;
-    color: #efefef;
+.maxTbl_wrapper-scrollFix-both .maxTbl thead tr .leftBoder0 {
+    border-left: 0;
 }
-.maxTbl_wrapper-scrollFix-both .maxTbl thead th:first-child {
+
+.maxTbl_wrapper-scrollFix-both .maxTbl thead tr th::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color:#eee;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl thead .sticky_both {
     position: sticky;
     left: 0;
-    border-right: 1px solid #aaa;
     z-index: 1;
+}
+.maxTbl_wrapper-scrollFix-both .maxTbl thead .sticky_both::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color:#eee;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody tr th {
+    position: sticky;
+    left: 0;
+    border-bottom: 1px solid #eee;
+    background-color: #aaa;
+    color: #333;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody tr th::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color:#eee;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody tr:last-child th,
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody .leftBoder0 {
+    border-left: 0;
 }
 
 /* maxTbl : scroll (responsive row) */
-.maxTbl_wrapper-responsive-row {
-    overflow: scroll;
-}
 .maxTbl_wrapper-responsive-row .maxTbl {
     white-space: nowrap;
 }
@@ -176,15 +247,13 @@ body {
 }
 
 /* maxTbl : scroll (responsive col) */
-.maxTbl_wrapper-responsive-col {
-    overflow: scroll;
-}
 .maxTbl_wrapper-responsive-col .maxTbl {
     white-space: nowrap;
 }
 
 @media screen and (max-width:768px) {
     .maxTbl_wrapper-responsive-col {
+        height: 100px;
         overflow-x: hidden;
     }
 }
