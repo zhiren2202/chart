@@ -20,18 +20,25 @@ body {
     width: 100%;    
 }
 
+.maxTbl th,
+.maxTbl td {
+    background: #fff;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+.maxTbl th {
+    min-width: 120px;
+}
+.maxTbl td {
+    min-width: 66px;
+}
+
 /* maxTbl : basic */
 .maxTbl_wrapper {}
 
 .maxTbl_wrapper .maxTbl {
     overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.maxTbl th,
-.maxTbl td {
-    background: #fff;
-    padding: 0.5em 1em;
 }
 
 .maxTbl thead tr th {}
@@ -53,7 +60,20 @@ body {
     min-width: 66px;
     border: 1px solid #eee;
     border-left: 0;
-    text-align: center;
+}
+
+/* maxTbl : fixed (col) */
+.maxTbl_wrapper-scroll-col {
+    height: 200px;
+}
+
+.maxTbl_wrapper-scroll-col .maxTbl thead tr th {
+    border: 1px solid #eee;
+    border-bottom: 1px solid #aaa;
+}
+
+.maxTbl_wrapper-scroll-col .maxTbl tbody tr td {
+    border: 1px solid #eee;
 }
 
 /* maxTbl : fixed (row) */
@@ -107,4 +127,64 @@ body {
     top: 0;
     min-width: 125px;
     background-color: #aaa;
+}
+
+/* maxTbl : fixed (both) */
+.maxTbl_wrapper-scrollFix-both {
+    height: 200px;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl th,
+.maxTbl_wrapper-scrollFix-both .maxTbl td {
+    border: 1px solid #eee;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl thead th {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #aaa;
+    background-color: #333;
+    color: #efefef;
+}
+
+.maxTbl_wrapper-scrollFix-both .maxTbl tbody th {
+    position: sticky;
+    left: 0;
+    border-right: 1px solid #aaa;
+    background-color: #333;
+    color: #efefef;
+}
+.maxTbl_wrapper-scrollFix-both .maxTbl thead th:first-child {
+    position: sticky;
+    left: 0;
+    border-right: 1px solid #aaa;
+    z-index: 1;
+}
+
+/* maxTbl : scroll (responsive row) */
+.maxTbl_wrapper-responsive-row {
+    overflow: scroll;
+}
+.maxTbl_wrapper-responsive-row .maxTbl {
+    white-space: nowrap;
+}
+
+@media screen and (max-width:768px) {
+    .maxTbl_wrapper-responsive-row {
+        overflow-y: hidden;
+    }
+}
+
+/* maxTbl : scroll (responsive col) */
+.maxTbl_wrapper-responsive-col {
+    overflow: scroll;
+}
+.maxTbl_wrapper-responsive-col .maxTbl {
+    white-space: nowrap;
+}
+
+@media screen and (max-width:768px) {
+    .maxTbl_wrapper-responsive-col {
+        overflow-x: hidden;
+    }
 }
