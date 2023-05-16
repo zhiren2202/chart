@@ -13,7 +13,7 @@
 <h3>1. 기본 테이블</h3>
 <div class="maxTbl_wrapper">
   <table class="maxTbl">
-    <caption>1. 기본 테이블</caption>
+    <caption class="maxTbl_caption">1. 기본 테이블</caption>
     <thead>
       <tr>
         <th scope="row">Table</th>
@@ -45,11 +45,11 @@
       <tr>
         <th scope="row">Table Header 6</th>
         <td>Data 6-1</td>
-        <td>Data 6-2</td>
+        <td>Data 6-2 maxTbl_wrapper</td>
       </tr>
       <tr>
         <th scope="row">Table Header 7</th>
-        <td>Data 7-1</td>
+        <td>Data 7-1 Data 7-1 Data 7-1 Data 7-1 Data 7-1</td>
         <td>Data 7-2</td>
       </tr>
       <tr>
@@ -63,9 +63,9 @@
 
 <!-- maxTbl : scroll (row) -->
 <h3>2-1. 테이블 가로 스크롤</h3>
-<div class="maxTbl_wrapper-scroll">
+<div class="maxTbl_wrapper-scroll-row">
   <table class="maxTbl">
-    <caption>2-1. 테이블 가로 스크롤</caption>
+    <caption class="maxTbl_caption">2-1. 테이블 가로 스크롤</caption>
     <thead>
       <tr>
         <th scope="row">Table Header 1</th>
@@ -117,7 +117,7 @@
 <h3>2-2. 테이블 세로 스크롤</h3>
 <div class="maxTbl_wrapper-scroll-col">
   <table class="maxTbl">
-    <caption>2-2. 테이블 세로 스크롤</caption>
+    <caption class="maxTbl_caption">2-2. 테이블 세로 스크롤</caption>
     <thead>
       <tr>
         <th scope="col">Table </th>
@@ -169,11 +169,11 @@
 <h3>3-1. 테이블 1열 고정 스크롤</h3>
 <div class="maxTbl_wrapper-scrollFix-row">
   <table class="maxTbl">
-    <caption>3-1. 테이블 1열 고정 스크롤</caption>
+    <caption class="maxTbl_caption">3-1. 테이블 1열 고정 스크롤</caption>
     <thead>
       <tr>
         <th scope="row">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, vel?</th>
-        <td>Data 1-1</td>
+        <td class="leftBoder0">Data 1-1</td>
         <td>Data 1-2</td>
       </tr>
     </thead>
@@ -221,7 +221,7 @@
 <h3>3-2. 테이블 1행 고정 스크롤</h3>
 <div class="maxTbl_wrapper-scrollFix-col">
   <table class="maxTbl">
-    <caption>3-2. 테이블 1행 고정 스크롤</caption>
+    <caption class="maxTbl_caption">3-2. 테이블 1행 고정 스크롤</caption>
     <thead>
       <tr>
         <th scope="col">Table</th>
@@ -261,9 +261,9 @@
         <td>Data</td>
       </tr>
       <tr>
-        <td class="border_sticky-bottom">Data</td>
-        <td class="border_sticky-bottom">Data</td>
-        <td class="border_sticky-bottom">Data</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
       </tr>
     </tbody>
   </table>
@@ -273,7 +273,7 @@
 <h3>3-3. 테이블 1열 & 1행 고정 스크롤</h3>
 <div class="maxTbl_wrapper-scrollFix-both">
   <table class="maxTbl">
-    <caption>3-3. 테이블 1열 & 1행 고정 스크롤</caption>
+    <caption class="maxTbl_caption">3-3. 테이블 1열 & 1행 고정 스크롤</caption>
     <thead>
       <tr>
         <th scope="col" class="sticky_both">maxTbl_wrapper-scrollFix-both Table Header</th>
@@ -321,11 +321,11 @@
   </table>
 </div>
 
-<!-- maxTbl : scroll (responsive) -->
+<!-- maxTbl : scroll (responsive row) -->
 <h3>4-1. 테이블 반응형 스크롤 (가로)</h3>
 <div class="maxTbl_wrapper-responsive-row">
   <table class="maxTbl">
-    <caption>4-1. 테이블 반응형 스크롤 (가로)</caption>
+    <caption class="maxTbl_caption">4-1. 테이블 반응형 스크롤 (가로)</caption>
     <thead>
       <tr>
         <th scope="row">maxTbl_wrapper-responsive-row Table Header 1</th>
@@ -373,11 +373,11 @@
   </table>
 </div>
 
-<!-- maxTbl : scroll (responsive) -->
+<!-- maxTbl : scroll (responsive col) -->
 <h3>4-1. 테이블 반응형 스크롤 (세로)</h3>
 <div class="maxTbl_wrapper-responsive-col">
   <table class="maxTbl">
-    <caption>4-1. 테이블 반응형 스크롤 (세로)</caption>
+    <caption class="maxTbl_caption">4-1. 테이블 반응형 스크롤 (세로)</caption>
     <thead>
       <tr>
         <th scope="row">Table Header 1</th>
