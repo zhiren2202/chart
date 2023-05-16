@@ -35,14 +35,17 @@ h2 {
     margin-left: 0;
 }
 
-@media screen and (max-width:1044px) {
-    .chart_box_bar {
+/* @media screen and (max-width:1500px) {
+    .chart_box_line {
         width: 99%;
         margin: 0 0 1% 0;
     }
-}
-@media screen and (max-width:885px) {
-    .chart_box {
+} */
+
+@media screen and (max-width:1044px) {
+    .chart_box_bar,
+    .chart_box_pie,
+    .chart_box_line {
         width: 99%;
         margin: 0 0 1% 0;
     }
