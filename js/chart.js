@@ -143,10 +143,10 @@ function drawChart2_1() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
-        // width: '100%',
-        // height: 'auto',
+        // width: 500,
+        // height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -171,9 +171,9 @@ function drawChart2_2() {
     ]);
 
     var options = {
-        width: 500,
+        // width: 500,
         // height: 200,
-        // width: '100%',
+        width: '100%',
         height: 'auto',
         title: 'Doughnut Chart',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
@@ -200,8 +200,8 @@ function drawChart2_3() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - 3D',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -227,8 +227,8 @@ function drawChart2_4() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - Slice',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -253,8 +253,8 @@ function drawChart2_5() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - Color',
         colors: ['#B9EDDD', '#87CBB9', '#569DAA', '#577D86', '#0A4D68'],
         backgroundColor: 'none',
@@ -280,8 +280,8 @@ function drawChart3_1() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - 연결선',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -307,8 +307,8 @@ function drawChart3_2() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - 범례위치 (Top)',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -334,8 +334,8 @@ function drawChart3_3() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - 범례위치 (Bottom)',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -361,8 +361,8 @@ function drawChart3_4() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - 범례위치 (Right)',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -388,8 +388,8 @@ function drawChart3_5() {
     ]);
 
     var options = {
-        width: 500,
-        height: 200,
+        width: '100%',
+        height: 'auto',
         title: 'Pie Chart - 범례위치 (Left)',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
@@ -414,6 +414,8 @@ function drawChart4_1() {
     ]);
 
     var options = {
+        width: '100%',
+        height: 'auto',
         title: 'Company Performance',
         curveType: 'function',
         legend: { position: 'bottom' }
@@ -435,6 +437,8 @@ function drawChart4_2() {
     ]);
 
     var options = {
+        width: '100%',
+        height: 'auto',
         title: 'Company Performance',
         curveType: 'function',
         legend: { position: 'bottom' },
