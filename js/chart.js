@@ -44,8 +44,8 @@ function drawChart1_1() {
         2]);
 
     var options = {
-        width: 800,
-        height: 400,
+        width: '100%',
+        height: 'auto',
         title: 'Bar Chart',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         legend: { position: "none" },
@@ -79,8 +79,8 @@ function drawChart1_2() {
         2]);
 
     var options = {
-        width: 800,
-        height: 400,
+        width: '100%',
+        height: 'auto',
         title: 'Bar Chart - Color, Border',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         legend: { position: "none" },
@@ -114,8 +114,8 @@ function drawChart1_3() {
         2]);
 
     var options = {
-        width: 800,
-        height: 400,
+        width: '100%',
+        height: 'auto',
         title: 'Bar Chart - Column',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         legend: { position: "none" },
