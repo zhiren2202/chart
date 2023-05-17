@@ -9,6 +9,7 @@ google.charts.setOnLoadCallback(drawChart2_2);
 google.charts.setOnLoadCallback(drawChart2_3);
 google.charts.setOnLoadCallback(drawChart2_4);
 google.charts.setOnLoadCallback(drawChart2_5);
+google.charts.setOnLoadCallback(drawChart2_6);
 
 google.charts.setOnLoadCallback(drawChart3_1);
 google.charts.setOnLoadCallback(drawChart3_2);
@@ -18,7 +19,8 @@ google.charts.setOnLoadCallback(drawChart3_5);
 
 google.charts.setOnLoadCallback(drawChart4_1);
 google.charts.setOnLoadCallback(drawChart4_2);
-
+google.charts.setOnLoadCallback(drawChart4_3);
+google.charts.setOnLoadCallback(drawChart4_4);
 
 
 // 1. Barchart
@@ -143,13 +145,15 @@ function drawChart2_1() {
     ]);
 
     var options = {
-        // width: 500,
-        // height: 200,
         width: '100%',
         height: 'auto',
         title: 'Pie Chart',
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
+        chartArea:{
+            width:'90%',
+            height:'70%'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -179,6 +183,10 @@ function drawChart2_2() {
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
         pieHole: 0.4,
+        chartArea:{
+            width:'100%',
+            height:'100%'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('doughnutchart'));
@@ -206,6 +214,10 @@ function drawChart2_3() {
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
         is3D: true,
+        chartArea:{
+            width:'90%',
+            height:'70%'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('pie_is3d'));
@@ -233,6 +245,10 @@ function drawChart2_4() {
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         backgroundColor: 'none',
         slices: { 3: { offset: 0.2 }, },
+        chartArea:{
+            width:'90%',
+            height:'70%'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('pie_slice'));
@@ -240,8 +256,41 @@ function drawChart2_4() {
     chart.draw(data, options);
 
 }
-// piechart_color
+
+// pie_slices
 function drawChart2_5() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work', 11],
+        ['Eat', 2],
+        ['Commute', 2],
+        ['Watch TV', 2],
+        ['Sleep', 7]
+    ]);
+
+    var options = {
+        width: '100%',
+        height: 'auto',
+        title: 'Pie Chart - Slices',
+        colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+        backgroundColor: 'none',
+        slices: { 
+            1: { offset: 0.4 },
+            3: { offset: 0.2 }, },
+        chartArea:{
+            width:'90%',
+            height:'70%'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('pie_slices'));
+
+    chart.draw(data, options);
+
+}
+// piechart_color
+function drawChart2_6() {
 
     var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
@@ -258,6 +307,10 @@ function drawChart2_5() {
         title: 'Pie Chart - Color',
         colors: ['#B9EDDD', '#87CBB9', '#569DAA', '#577D86', '#0A4D68'],
         backgroundColor: 'none',
+        chartArea:{
+            width:'90%',
+            height:'70%'
+        }
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart_color'));
@@ -416,7 +469,7 @@ function drawChart4_1() {
     var options = {
         width: '100%',
         height: 'auto',
-        title: 'Company Performance',
+        title: 'Curve Chart',
         curveType: 'function',
         legend: { position: 'bottom' }
     };
@@ -439,16 +492,64 @@ function drawChart4_2() {
     var options = {
         width: '100%',
         height: 'auto',
-        title: 'Company Performance',
+        title: 'Curve Chart (dot,color)',
         curveType: 'function',
         legend: { position: 'bottom' },
         series: {
             0: { lineWidth: 1 },
             1: { lineWidth: 4, lineDashStyle: [4, 4] }
         },
+        colors : ['purple','orange'],
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart_dot'));
+
+    chart.draw(data, options);
+}
+
+// line_chart
+function drawChart4_3() {
+    var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses'],
+        ['2004', 1000, 400],
+        ['2005', 1170, 460],
+        ['2006', 660, 1120],
+        ['2007', 1030, 540]
+    ]);
+
+    var options = {
+        width: '100%',
+        height: 'auto',
+        title: 'Line Chart',
+        legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+
+    chart.draw(data, options);
+}
+
+// area_chart
+function drawChart4_4() {
+    var data = google.visualization.arrayToDataTable([
+        ['Year', 'Sales', 'Expenses'],
+        ['2004', 1000, 400],
+        ['2005', 1170, 460],
+        ['2006', 660, 1120],
+        ['2007', 1030, 540]
+    ]);
+
+    var options = {
+        width: '100%',
+        height: 'auto',
+        title: 'Area Chart',
+        hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+        vAxis: {minValue: 0},
+        legend: { position: 'bottom' },
+        colors: ['orange','green']
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('area_chart'));
 
     chart.draw(data, options);
 }
