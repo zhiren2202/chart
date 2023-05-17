@@ -21,7 +21,7 @@ h2 {
 [class*='chart_box'] {
     overflow: hidden;
     width: 49%;
-    padding: 1em 0 0 0;
+    padding: 2em 0;
     border: 1px solid #aaa;
     margin: 0.5%;
     float: left;
@@ -34,13 +34,6 @@ h2 {
 .ml0 {
     margin-left: 0;
 }
-
-/* @media screen and (max-width:1500px) {
-    .chart_box_line {
-        width: 99%;
-        margin: 0 0 1% 0;
-    }
-} */
 
 @media screen and (max-width:1044px) {
     .chart_box_bar,
