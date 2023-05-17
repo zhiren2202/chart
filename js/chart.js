@@ -54,7 +54,7 @@ function drawChart1_1() {
         colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         legend: { position: "none" },
         chartArea:{
-            width:'90%',
+            width:'50%',
             height:'70%'
         }
     };
