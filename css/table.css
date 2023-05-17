@@ -20,14 +20,6 @@ body {
     width: 100%;
 }
 
-/* [class*='maxTbl_wrapper-'] .maxTbl th {
-    min-width: 120px;
-}
-
-[class*='maxTbl_wrapper-'] .maxTbl td {
-    min-width: 66px;
-} */
-
 [class*='maxTbl_wrapper'] .maxTbl .maxTbl_caption {
     overflow: hidden;
     width: 1px;
@@ -291,37 +283,3 @@ body {
 .maxTbl_wrapper-scrollFix-both .maxTbl tbody tr:last-child td {
     border-bottom: 0;
 }
-
-/* maxTbl : scroll (responsive) */
-/* [class*='maxTbl_wrapper-responsive-'] .maxTbl thead tr th,
-[class*='maxTbl_wrapper-responsive-'] .maxTbl thead tr td,
-[class*='maxTbl_wrapper-responsive-'] .maxTbl tbody tr th,
-[class*='maxTbl_wrapper-responsive-'] .maxTbl tbody tr td {
-    border-left: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
-}
-
-[class*='maxTbl_wrapper-responsive-'] .maxTbl thead tr th,
-[class*='maxTbl_wrapper-responsive-'] .maxTbl tbody tr th {
-    border-left: 0;
-}
-
-[class*='maxTbl_wrapper-responsive-'] .maxTbl tbody tr:last-child th,
-[class*='maxTbl_wrapper-responsive-'] .maxTbl tbody tr:last-child td {
-    border-bottom: 0;
-} */
-
-/* maxTbl : scroll (responsive row) */
-/* @media screen and (max-width:768px) {
-    .maxTbl_wrapper-responsive-row {
-        overflow-y: hidden;
-    }
-} */
-
-/* maxTbl : scroll (responsive col) */
-/* @media screen and (max-width:768px) {
-    .maxTbl_wrapper-responsive-col {
-        height: 100px;
-        overflow-x: hidden;
-    }
-} */
