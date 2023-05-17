@@ -18,6 +18,71 @@ h2 {
     margin: 2em 0 1em 0;
 }
 
+/* Bar Chart Animation */
+.barchart_ani {
+    margin: 1em;
+}
+.graph {
+    height: 40px;
+    background-color: #eee;
+    border-radius: 40px;
+    margin-bottom: 0.5em;
+}
+.graph span {
+    display: block;
+    padding: 0 10px;
+    width: 75%;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.stack1 span {
+    background: #e0440e;
+    animation: stack1 2s;
+    width: 75%;
+}
+.stack2 span {
+    background: #e6693e;
+    animation: stack2 2s;
+    width: 60%;
+}
+.stack3 span {
+    background: #ec8f6e;
+    animation: stack3 2s;
+    width: 25%;
+}
+
+@keyframes stack1 {
+    0% {
+        width: 0;
+        color: #fff;
+    }
+    100% {
+        width: 75%;
+    }
+}
+@keyframes stack2 {
+    0% {
+        width: 0;
+        color: #fff;
+    }
+    100% {
+        width: 60%;
+    }
+}
+@keyframes stack3 {
+    0% {
+        width: 0;
+        color: #fff;
+    }
+    100% {
+        width: 25%;
+    }
+}
+
 [class*='chart_box'] {
     overflow: hidden;
     width: 49%;
