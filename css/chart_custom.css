@@ -7,17 +7,24 @@ body {
     padding: 0 1em;
 }
 
+h2 {
+    margin-top: 1em;
+}
+
 .w50 {
     width: 49%;
     height: auto;
     overflow: hidden;
     margin-left: 2%;
-    /* background-color: #aaa; */
     float: left;
 }
 
 .mleft0 {
     margin-left: 0;
+}
+
+.mright50 {
+    margin-right: 50%;
 }
 
 .w80 {
