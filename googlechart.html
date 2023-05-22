@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Chart</title>
+  <link rel="stylesheet" href="css/googlechart.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/googlechart.js"></script>
+</head>
+
+<body>
+  
+  <!-- Bar Chart Animation -->
+  <h2>Bar Chart Animation</h2>
+  <div class="barchart_ani">
+    <div class="graph stack1">
+      <span>75%</span>
+    </div>
+
+    <div class="graph stack2">
+      <span>60%</span>
+    </div>
+
+    <div class="graph stack3">
+      <span>25%</span>
+    </div>
+  </div>
+
+  <!-- 1. Barchart -->
+  <div class="w100">
+    <h2>Bar Chart</h2>
+    <div class="chart_box_bar ml0"><div id="barchart1"></div></div>
+    <div class="chart_box_bar"><div id="barchart2"></div></div>
+    <div class="chart_box_bar ml0"><div id="columnchart1"></div></div>
+    <div class="chart_box_bar"><div id="columnchart_ani"></div></div>
+  </div>
+
+  <!-- 2. Piechart -->
+  <div class="w100">
+    <h2>Pie Chart</h2>
+    <div class="chart_box_pie ml0"><div id="piechart"></div></div>
+    <div class="chart_box_pie"><div id="doughnutchart"></div></div>
+    <div class="chart_box_pie ml0"><div id="pie_is3d"></div></div>
+    <div class="chart_box_pie"><div id="pie_slice"></div></div>
+    <div class="chart_box_pie ml0"><div id="pie_slices"></div></div>
+    <div class="chart_box_pie"><div id="piechart_color"></div></div>
+    <div class="chart_box_pie ml0"><div id="piechart_ani"></div></div>
+  </div>
+
+  <!-- 3. Piechart - Legend -->
+  <div class="w100">
+    <h2>Pie Chart - 범례</h2>
+    <div class="chart_box_pie ml0"><div id="piechart_legend_labeled"></div></div>
+    <div class="chart_box_pie"><div id="piechart_legend_position_top"></div></div>
+    <div class="chart_box_pie ml0"><div id="piechart_legend_position_bottom"></div></div>
+    <div class="chart_box_pie"><div id="piechart_legend_position_right"></div></div>
+    <div class="chart_box_pie ml0"><div id="piechart_legend_position_left"></div></div>
+  </div>
+
+  <!-- 4. Curve/Line chart -->
+  <div class="w100">
+    <h2>Line Chart</h2>
+    <div class="chart_box_line ml0"><div id="curve_chart"></div></div>
+    <div class="chart_box_line"><div id="curve_chart_dot"></div></div>
+    <div class="chart_box_line ml0"><div id="line_chart"></div></div>
+    <div class="chart_box_line"><div id="area_chart"></div></div>
+  </div>
+
+</body>
+
+</html>
