@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<h2>1. Bar Chart</h2>
 <!-- Bar (basic) -->
 <div class="w50 mleft0">
     <canvas id="barchart-1" width="400" height="400"></canvas>
@@ -148,6 +149,7 @@ var myChart = new Chart(ctx, {
 </script>
 <!-- //Bar (color, border, width) -->
 
+<h2>2. Horizontal Chart</h2>
 <!-- horizontal (basic) -->
 <div class="w80">
     <canvas id="horichart-1" width="800" height="400"></canvas>
@@ -178,7 +180,7 @@ var myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
         }]
     },
     options: {
@@ -199,22 +201,26 @@ var myChart = new Chart(ctx, {
                     var idx = context.dataIndex;
                     return value;
                 },
+                color: '#333',
+                font: {
+                    size: '16px'
+                },
             },
             title: {
                 display: true,
-                text: 'horizontal (basic)',
+                text: 'Horizontal (basic)',
                 position: 'top',
                 font: {
                     size: '20px'
                 }
-            }
+            },
         },
     }
 });
 </script>
 <!-- //horizontal (basic) -->
 
-<!-- Bar (horizontal double) -->
+<!-- horizontal (double) -->
 <div class="w80">
     <canvas id="horichart-2" width="800" height="400"></canvas>
 </div>
@@ -224,47 +230,39 @@ var myChart = new Chart(ctx, {
     type: 'bar',
     plugins:[ChartDataLabels],
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Red', 'Blue', 'Yellow', 'Green'],
         datasets: [
             {
             label: 'Bar (basic)',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 19, 3, 5],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
         },
             {
             label: 'Bar (basic)',
-            data: [15, 1, 13, 8, 10, 7],
+            data: [15, 1, 13, 8],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
                 'rgba(54, 162, 235, 0.5)',
                 'rgba(255, 206, 86, 0.5)',
                 'rgba(75, 192, 192, 0.5)',
-                'rgba(153, 102, 255, 0.5)',
-                'rgba(255, 159, 64, 0.5)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
         }
@@ -288,10 +286,83 @@ var myChart = new Chart(ctx, {
                     var idx = context.dataIndex;
                     return value;
                 },
+                color: '#333',
+                font: {
+                    size: '16px'
+                },
             },
             title: {
                 display: true,
-                text: 'Bar (horizontal double)',
+                text: 'Horizontal (double)',
+                position: 'top',
+                font: {
+                    size: '20px'
+                }
+            },
+        },
+    }
+});
+</script>
+<!-- //horizontal (double) -->
+
+<!-- horizontal (border radius) -->
+<div class="w80">
+    <canvas id="horichart-3" width="800" height="400"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('horichart-3').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    plugins:[ChartDataLabels],
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: 'Bar (basic)',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+            borderRadius: 30,
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter: function (value, context) {
+                    var idx = context.dataIndex;
+                    return value;
+                },
+                align: 'center',
+                color: '#fff'
+            },
+            title: {
+                display: true,
+                text: 'Horizontal (border radius)',
                 position: 'top',
                 font: {
                     size: '20px'
@@ -301,8 +372,9 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
-<!-- //Bar (horizontal double) -->
+<!-- //horizontal (border radius) -->
 
+<h2>3. Pie Chart</h2>
 <!-- Pie (basic) -->
 <div class="w50 mleft0">
     <canvas id="piechart-1" width="400" height="400"></canvas>
@@ -318,12 +390,12 @@ var myChart = new Chart(ctx, {
             label: 'Bar (basic)',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -369,7 +441,7 @@ var myChart = new Chart(ctx, {
 </script>
 <!-- //Pie (basic) -->
 
-<!-- Pie (Color, Border, Width) -->
+<!-- Pie (color, border) -->
 <div class="w50">
     <canvas id="piechart-2" width="400" height="400"></canvas>
 </div>
@@ -384,12 +456,12 @@ var myChart = new Chart(ctx, {
             label: 'Bar (basic)',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
-                'rgba(255, 99, 255, 0.2)',
-                'rgba(54, 162, 5, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 255, 0.5)',
+                'rgba(54, 162, 5, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -423,7 +495,7 @@ var myChart = new Chart(ctx, {
             },
             title: {
                 display: true,
-                text: 'Pie (Color, Border, Width)',
+                text: 'Pie (color, border)',
                 position: 'top',
                 font: {
                     size: '20px'
@@ -433,10 +505,10 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
-<!-- //Pie (Color, Border, Width) -->
+<!-- //Pie (color, border) -->
 
 <!-- Pie (doughnut) -->
-<div class="w50 mleft0">
+<div class="w50 mleft0 mright50">
     <canvas id="piechart-3" width="400" height="400"></canvas>
 </div>
 <script>
@@ -450,11 +522,11 @@ var myChart = new Chart(ctx, {
             label: 'Bar (basic)',
             data: [12, 19, 3, 5, 2],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)'
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -481,9 +553,10 @@ var myChart = new Chart(ctx, {
                     return value;
                 },
                 font: {
-                    size: '16px',
+                    size: '18px',
+                    weight: 'bold'
                 },
-                color: '#333',
+                color: '#fff',
             },
             title: {
                 display: true,
@@ -499,8 +572,9 @@ var myChart = new Chart(ctx, {
 </script>
 <!-- //Pie (doughnut) -->
 
+<h2>4. Line Chart</h2>
 <!-- Line (Basic) -->
-<div class="w50">
+<div class="w50 mleft0">
     <canvas id="linechart-1" width="400" height="400"></canvas>
 </div>
 <script>
@@ -564,7 +638,7 @@ var myChart = new Chart(ctx, {
 <!-- //Line (Basic) -->
 
 <!-- Line (Curve) -->
-<div class="w50 mleft0">
+<div class="w50">
     <canvas id="linechart-2" width="400" height="400"></canvas>
 </div>
 <script>
@@ -628,9 +702,8 @@ var myChart = new Chart(ctx, {
 </script>
 <!-- //Line (Curve) -->
 
-
 <!-- Line (Color, Border) -->
-<div class="w50">
+<div class="w50 mleft0">
     <canvas id="linechart-3" width="400" height="400"></canvas>
 </div>
 <script>
@@ -694,7 +767,7 @@ var myChart = new Chart(ctx, {
 <!-- //Line (Color, Border) -->
 
 <!-- Line (label position - top) -->
-<div class="w50 mleft0">
+<div class="w50">
     <canvas id="linechart-4" width="400" height="400"></canvas>
 </div>
 <script>
@@ -826,7 +899,7 @@ var myChart = new Chart(ctx, {
 <!-- //Line (label position - bottom) -->
 
 <!-- Line (Area) -->
-<div class="w50 mleft0">
+<div class="w50">
     <canvas id="linechart-6" width="400" height="400"></canvas>
 </div>
 <script>
@@ -893,6 +966,8 @@ var myChart = new Chart(ctx, {
 });
 </script>
 <!-- //Line (Area) -->
+
+
 
 </body>
 </html>
