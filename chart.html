@@ -508,7 +508,7 @@ var myChart = new Chart(ctx, {
 <!-- //Pie (color, border) -->
 
 <!-- Pie (doughnut) -->
-<div class="w50 mleft0 mright50">
+<div class="w50 mleft0">
     <canvas id="piechart-3" width="400" height="400"></canvas>
 </div>
 <script>
@@ -571,6 +571,210 @@ var myChart = new Chart(ctx, {
 });
 </script>
 <!-- //Pie (doughnut) -->
+
+<!-- Pie (legend - bottom) -->
+<div class="w50">
+    <canvas id="piechart-4" width="400" height="400"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('piechart-4').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    plugins:[ChartDataLabels],
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+            label: 'Bar (basic)',
+            data: [12, 19, 3, 5, 2],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+            datalabels: {
+                formatter : function(value,context) {
+                    var idx = context.dataIndex;
+                    return value;
+                },
+                font: {
+                    size: '18px',
+                    weight: 'bold'
+                },
+                color: '#fff',
+            },
+            title: {
+                display: true,
+                text: 'Pie (legend - bottom)',
+                position: 'top',
+                font: {
+                    size: '20px'
+                }
+            },
+            legend: {
+                position : 'bottom'
+            }
+        }
+    }
+});
+</script>
+<!-- //Pie (legend - bottom) -->
+
+<!-- Pie (legend - left) -->
+<div class="w50 mleft0">
+    <canvas id="piechart-5" width="400" height="400"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('piechart-5').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    plugins:[ChartDataLabels],
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+            label: 'Bar (basic)',
+            data: [12, 19, 3, 5, 2],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+            datalabels: {
+                formatter : function(value,context) {
+                    var idx = context.dataIndex;
+                    return value;
+                },
+                font: {
+                    size: '18px',
+                    weight: 'bold'
+                },
+                color: '#fff',
+            },
+            title: {
+                display: true,
+                text: 'Pie (legend - left)',
+                position: 'top',
+                font: {
+                    size: '20px'
+                }
+            },
+            legend: {
+                position : 'left'
+            }
+        }
+    }
+});
+</script>
+<!-- //Pie (legend - left) -->
+
+<!-- Pie (legend - right) -->
+<div class="w50">
+    <canvas id="piechart-6" width="400" height="400"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('piechart-6').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    plugins:[ChartDataLabels],
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+            label: 'Bar (basic)',
+            data: [12, 19, 3, 5, 2],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+            datalabels: {
+                formatter : function(value,context) {
+                    var idx = context.dataIndex;
+                    return value;
+                },
+                font: {
+                    size: '18px',
+                    weight: 'bold'
+                },
+                color: '#fff',
+            },
+            title: {
+                display: true,
+                text: 'Pie (legend - right)',
+                position: 'top',
+                font: {
+                    size: '20px'
+                }
+            },
+            legend: {
+                position : 'right'
+            }
+        }
+    }
+});
+</script>
+<!-- //Pie (legend - right) -->
 
 <h2>4. Line Chart</h2>
 <!-- Line (Basic) -->
@@ -724,7 +928,7 @@ var myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)'
             ],
             borderColor: [
-            'rgba(255, 206, 86, 1)'
+                'rgba(255, 206, 86, 1)',
             ],
             borderWidth: 5,
         }]
@@ -832,7 +1036,7 @@ var myChart = new Chart(ctx, {
 </script>
 <!-- //Line (label position - top) -->
 
-<!-- Line (label position - bottom) -->
+<!-- Line (label position - 45 degree) -->
 <div class="w50 mleft0">
     <canvas id="linechart-5" width="400" height="400"></canvas>
 </div>
@@ -881,12 +1085,12 @@ var myChart = new Chart(ctx, {
                     size: '20px',
                 },
                 color: '#333',
-                align: 'start',
-                offset: '2',
+                align: '-45',
+                offset: '1'
             },
             title: {
                 display: true,
-                text: 'Line (Label Position - Bottom)',
+                text: 'Line (Label Position - 45 degree)',
                 position: 'top',
                 font: {
                     size: '20px'
@@ -896,7 +1100,7 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
-<!-- //Line (label position - bottom) -->
+<!-- //Line (label position - 45 degree) -->
 
 <!-- Line (Area) -->
 <div class="w50">
@@ -925,8 +1129,8 @@ var myChart = new Chart(ctx, {
             borderWidth: 5,
             fill: {
                 target: 'origin',
-                above: 'rgba(153, 102, 255, 0.6)',   // Area will be red above the origin
-                below: 'rgb(0, 0, 255)'    // And blue below the origin
+                above: 'rgba(255, 206, 86, 0.5)',
+                below: 'rgb(0, 0, 255)'
             }
         }]
     },
