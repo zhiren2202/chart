@@ -7,7 +7,6 @@
     <title>Chart.js</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0 "></script>
-    <script src="js/chart_custom.js"></script>
     <link rel="stylesheet" href="css/chart_custom.css">
 </head>
 <body>
@@ -1170,6 +1169,140 @@ var myChart = new Chart(ctx, {
 });
 </script>
 <!-- //Line (Area) -->
+
+<!-- Line (Point Style - rect) -->
+<div class="w50 mleft0">
+    <canvas id="linechart-7" width="400" height="400"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('linechart-7').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    plugins:[ChartDataLabels],
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+            label: 'LIne (basic)',
+            data: [12, 19, 3, 5, 2],
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 5,
+            pointStyle:'rect',
+            pointBorderWidth: 10,
+            pointBorderColor:'#d3687f'
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter : function(value,context) {
+                    var idx = context.dataIndex;
+                    return value;
+                },
+                font: {
+                    weight: 'bold',
+                    size: '20px',
+                },
+                color: '#333',
+                align: '-45',
+                offset: '1'
+            },
+            title: {
+                display: true,
+                text: 'Line (Point Style - rect)',
+                position: 'top',
+                font: {
+                    size: '20px'
+                }
+            }
+        }
+    }
+});
+</script>
+<!-- //Line (Point Style - rect) -->
+
+<!-- Line (Point Style - color) -->
+<div class="w50">
+    <canvas id="linechart-8" width="400" height="400"></canvas>
+</div>
+<script>
+var ctx = document.getElementById('linechart-8').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    plugins:[ChartDataLabels],
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+        datasets: [{
+            label: 'LIne (basic)',
+            data: [12, 19, 3, 5, 2],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderColor: [
+            'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 5,
+            pointBorderWidth: 10,
+            pointBorderColor:[
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 110, 10, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ]
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                formatter : function(value,context) {
+                    var idx = context.dataIndex;
+                    return value;
+                },
+                font: {
+                    weight: 'bold',
+                    size: '20px',
+                },
+                color: '#333',
+                align: '-45',
+                offset: '1'
+            },
+            title: {
+                display: true,
+                text: 'Line (Point Style - color)',
+                position: 'top',
+                font: {
+                    size: '20px'
+                }
+            }
+        }
+    }
+});
+</script>
+<!-- //Line (Point Style - color) -->
 
 
 
