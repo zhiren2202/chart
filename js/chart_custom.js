@@ -29,7 +29,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -113,7 +113,7 @@ var myChart = new Chart(ctx, {
             },
         },
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -154,7 +154,7 @@ var myChart = new Chart(ctx, {
     options: {
         indexAxis: 'y',
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -233,7 +233,7 @@ var myChart = new Chart(ctx, {
     options: {
         indexAxis: 'y',
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -298,7 +298,7 @@ var myChart = new Chart(ctx, {
     options: {
         indexAxis: 'y',
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -359,7 +359,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -419,7 +419,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -477,7 +477,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -536,7 +536,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -598,7 +598,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -660,7 +660,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -722,7 +722,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -785,7 +785,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -845,7 +845,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -904,7 +904,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -961,7 +961,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1019,7 +1019,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1079,7 +1079,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1144,7 +1144,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1210,7 +1210,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1264,7 +1264,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1318,7 +1318,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -1372,7 +1372,7 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{
+            y: [{
                 ticks: {
                     beginAtZero: true
                 }
